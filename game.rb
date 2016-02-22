@@ -1,4 +1,3 @@
-
 def in_front
   puts "Vizzini says: \"Now, a clever man would put the poison into his own goblet, \nbecause he would know that only a great fool would reach for what he was given.\"\n\n"
   puts "\nDo you still want to drink the wine in front of you? y/n"
@@ -15,14 +14,14 @@ def in_front
     puts "Vizzini drops to the ground dead.  You win the battle of the wits."
 
   elsif choice == "n"
-    puts "Vizzini looks at you distrustfully. \"Then you choose the wine opposite you?\""
+    puts "Vizzini looks at you distrustfully. \"Then you choose the wine opposite you?\" y/n"
 
     print "> "
     choice = $stdin.gets.chomp.downcase
 
-    if choice == "yes"
+    if choice == "y"
       opposite
-    elsif choice == "no"
+    elsif choice == "n"
       puts "You drink the wine in front of you, albeit reluctantly."
       puts "Vizzini suddenly exclaims: \"What in the world can that be?\""
       puts "You look, but see nothing.\n"
@@ -30,14 +29,14 @@ def in_front
       puts "I switched glasses when your back was turned. Ha! You fool!"
       puts "You fell victim to one of the classic blunders. The most famous is \"never get involved in a land war in Asia\", but only slightly less well known is this - never go in against a Sicilian when death is on the line. Ahahaaaahaa!  Aa..\n\n"
       puts "Vizzini drops to the ground dead.  You win the battle of the wits."
-    else 
+    else
       puts "Vizzini gets impatient. You must choose! Enter (y)es or (n)o."
     end
   end
 end
 
 def opposite
-  puts "Vizzini says: \"A clever man would put the poison into his own goblet, \nbecause he would know that only a great fool would reach for what he was given.\"\n\n" 
+  puts "Vizzini says: \"A clever man would put the poison into his own goblet, \nbecause he would know that only a great fool would reach for what he was given.\"\n\n"
   puts "You are not a great fool, and so reach for the glass opposite you and drink from it.\n\n"
   puts "You both salute each other, and drink.  \nMoments later, Vizzini drops dead.  \n\nYou win the battle of the wits."
 end
@@ -55,7 +54,7 @@ def start
     in_front
   elsif choice == "v"
     opposite
-  else 
+  else
     puts "This word, I do not think it means what you think it means.  Pick again."
     start
   end
